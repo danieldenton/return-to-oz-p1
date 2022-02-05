@@ -1,0 +1,120 @@
+body {
+  background-color: purple;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+  width: 700px;
+  height: 700px;
+}
+
+#object1 {
+  background-color: red;
+  color: black;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object1 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object2 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object3 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object4 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object5 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object6 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object7 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object8 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
+
+#object9 {
+  background-color: red;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vh 1vw;
+}
