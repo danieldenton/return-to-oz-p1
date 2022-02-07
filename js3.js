@@ -25,7 +25,7 @@ winningSelections.forEach(function (orn) {
     "click",
     function () {
       correctClicked += 1;
-      if (totalClicks() === 3) {
+      if (correctClicked === 3) {
         displayResult();
       }
     },
@@ -40,7 +40,7 @@ incorrectSelections.forEach(function (orn) {
     "click",
     function () {
       incorrectClicked += 1;
-      if (totalClicks() === 3) {
+      if (incorrectClicked === 3) {
         displayResult();
       }
     },
@@ -67,9 +67,29 @@ function randomSplit(arr, idx) {
 
 function displayResult() {
   document.querySelector("#container").style.display = "none";
-  document.querySelector(
-    "#result"
-  ).innerHTML = `Correct selections: ${correctClicked}, incorrect selections: ${incorrectClicked}`;
+  //   document.querySelector("#background-text").innerText = "";
+  //   if (correctClicked === 1) {
+  //     document.querySelector("#result").innerText =
+  //       "Dorothy managed to save Scarecrow, but Jack, Tik-Tok and the rest of Oz still belong to the Gnome King.";
+  //     document.querySelector("body").style.backgroundImage = "url(GK.png)";
+  //     // document.querySelector("#play-again").innerText = "Play again";
+  //   } else if (correctClicked === 2) {
+  //     document.querySelector("#result").innerText =
+  //       "Dorothy managed to save Scarecrow and Jack, but Tik-Tok and the rest of Oz still belong to the Gnome King.";
+  //     document.querySelector("body").style.backgroundImage = "url(GK.png)";
+  //     // document.querySelector("#play-again").innerText = "Play again";
+  //     ("href=beware.png display-text");
+  //   } else if (incorrectClicked === 3) {
+  //     document.querySelector("#result").innerText =
+  //       "Dorothy has failed to save her friends. They and the rest of Oz still belong to the Gnome King.";
+  //     document.querySelector("body").style.backgroundImage = "url(GK.png)";
+  //     // document.querySelector("#play-again").innerText = "Play again";
+  //   } else {
+  //     document.querySelector("#result2").innerText =
+  //       "Dorothy has saved her friends and the rest of Oz from the Gnome King!";
+  //     document.querySelector("body").style.backgroundImage = "url(Ending.png)";
+  //     // document.querySelector("#play-again2").innerText = "Play again";
+  //   }
 }
 
 console.log(winningSelections, incorrectSelections);
