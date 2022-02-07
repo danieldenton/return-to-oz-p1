@@ -1,120 +1,79 @@
 body {
-  background-color: purple;
+  background-image: url("OBJ2.png");
+}
+
+#background-text {
+  position: fixed;
+  color: rgb(240, 225, 60);
+  width: 110px;
+  height: 280px;
+  left: 700px;
+  font-size: 14px;
 }
 
 #container {
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: stretch;
-  width: 700px;
-  height: 700px;
+  justify-content: center;
+  align-content: center;
+  width: 1300px;
+  height: 130px;
+  bottom: 10px;
+  left: 10px;
 }
 
-#object1 {
-  background-color: red;
-  color: black;
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
-}
-
-#object1 {
-  background-color: red;
+.object {
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  width: 55px;
+  height: 55px;
+  margin: 2vh 2vw;
+  transform: rotate(45deg);
+}
+
+.object:hover {
+  background-color: white;
+}
+
+#object1 {
+  background-color: rgb(255, 17, 0);
 }
 
 #object2 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(255, 132, 0);
 }
 
 #object3 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(255, 217, 0);
 }
 
 #object4 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(157, 255, 0);
 }
 
 #object5 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(4, 174, 44);
 }
 
 #object6 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(24, 232, 235);
 }
 
 #object7 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(55, 44, 255);
 }
 
 #object8 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(174, 14, 242);
 }
 
 #object9 {
-  background-color: red;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 1vh 1vw;
+  background-color: rgb(255, 36, 186);
+}
+
+.invisible {
+  display: none;
 }

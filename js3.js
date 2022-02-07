@@ -1,4 +1,4 @@
-const objects = [
+const ornanments = [
   document.getElementById("object1"),
   document.getElementById("object2"),
   document.getElementById("object3"),
@@ -9,18 +9,45 @@ const objects = [
   document.getElementById("object8"),
   document.getElementById("object9"),
 ];
-const [winningSelections, incorrectSelections] = randomSplit(objects, 3);
 
-winningSelections.forEach(function (obj) {
-  obj.addEventListener("click", function () {
-    alert("correct");
-  });
+const [winningSelections, incorrectSelections] = randomSplit(ornanments, 3);
+const playerWinSel = [];
+const playerInc = [];
+
+let correctClicked = 0;
+let incorrectClicked = 0;
+function totalClicks() {
+  return correctClicked + incorrectClicked;
+}
+
+winningSelections.forEach(function (orn) {
+  orn.addEventListener(
+    "click",
+    function () {
+      correctClicked += 1;
+      if (totalClicks() === 3) {
+        displayResult();
+      }
+    },
+    {
+      once: true,
+    }
+  );
 });
 
-incorrectSelections.forEach(function (obj) {
-  obj.addEventListener("click", function () {
-    alert("incorrect");
-  });
+incorrectSelections.forEach(function (orn) {
+  orn.addEventListener(
+    "click",
+    function () {
+      incorrectClicked += 1;
+      if (totalClicks() === 3) {
+        displayResult();
+      }
+    },
+    {
+      once: true,
+    }
+  );
 });
 
 function shuffle(a) {
@@ -36,6 +63,13 @@ function randomSplit(arr, idx) {
   const start = arr.slice(0, idx);
   const end = arr.slice(idx, arr.length);
   return [start, end];
+}
+
+function displayResult() {
+  document.querySelector("#container").style.display = "none";
+  document.querySelector(
+    "#result"
+  ).innerHTML = `Correct selections: ${correctClicked}, incorrect selections: ${incorrectClicked}`;
 }
 
 console.log(winningSelections, incorrectSelections);
