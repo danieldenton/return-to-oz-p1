@@ -5,10 +5,10 @@ body {
 #background-text {
   position: fixed;
   color: rgb(240, 225, 60);
-  width: 110px;
+  width: 180px;
   height: 280px;
   left: 700px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 #container {
@@ -117,16 +117,6 @@ body {
   height: 400px;
   left: 50px;
   top: 40px;
-  font-size: 37px;
-}
-
-#result2 {
-  position: fixed;
-  color: rgb(170, 255, 0);
-  width: 300px;
-  height: 400px;
-  right: 400px;
-  top: 400px;
   font-size: 37px;
 }
 
