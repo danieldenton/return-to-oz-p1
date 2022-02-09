@@ -20,13 +20,20 @@ function totalClicks() {
   return correctClicked + incorrectClicked;
 }
 
+const audio = new Audio("oz.wav");
+
 winningSelections.forEach(function (orn) {
   orn.addEventListener(
     "click",
     function () {
       correctClicked += 1;
+      audio.play();
+      const images = ["Scarecrow.png", "Jack.png", "TikTok.png"];
+      orn.src = images[correctClicked - 1];
       if (correctClicked === 3) {
-        displayResult();
+        setInterval(function () {
+          displayResult();
+        }, 3000);
       }
     },
     {
@@ -36,18 +43,14 @@ winningSelections.forEach(function (orn) {
 });
 
 incorrectSelections.forEach(function (orn) {
-  orn.addEventListener(
-    "click",
-    function () {
-      incorrectClicked += 1;
-      if (incorrectClicked === 3) {
-        displayResult();
-      }
-    },
-    {
-      once: true,
+  orn.addEventListener("click", function () {
+    incorrectClicked += 1;
+    orn.style.display = "none";
+    audio.play();
+    if (incorrectClicked === 3) {
+      displayResult();
     }
-  );
+  });
 });
 
 function shuffle(a) {
@@ -85,10 +88,6 @@ function displayResult() {
     document.querySelector("body").style.backgroundImage = "url(GK.png)";
     document.querySelector("#play-again").innerText = "Play again";
   } else {
-    // document.querySelector("#result2").innerText =
-    //   "Dorothy has saved her friends and the rest of Oz from the Gnome King!";
-    // document.querySelector("body").style.backgroundImage = "url(Ending.png)";
-    // document.querySelector("#play-again2").innerText = "Play again";
     window.location.href = "index4.html";
   }
 }
