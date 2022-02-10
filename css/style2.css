@@ -6,7 +6,7 @@ body {
 }
 
 .main2 {
-  background-image: url("GK&D.png");
+  background-image: url("../images/GK&D.png");
   background-repeat: no-repeat;
   position: absolute;
   /* object-fit: cover; */

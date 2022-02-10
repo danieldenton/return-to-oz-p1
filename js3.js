@@ -20,16 +20,29 @@ function totalClicks() {
   return correctClicked + incorrectClicked;
 }
 
-const audio = new Audio("oz.wav");
+const audio1 = new Audio("audio/correct.wav");
+const audio2 = new Audio("audio/wrong.wav");
 
 winningSelections.forEach(function (orn) {
   orn.addEventListener(
     "click",
     function () {
       correctClicked += 1;
-      audio.play();
-      const images = ["Scarecrow.png", "Jack.png", "TikTok.png"];
+      audio1.play();
+      const images = [
+        "images/Scarecrow.png",
+        "images/Jack.png",
+        "images/TikTok.png",
+      ];
       orn.src = images[correctClicked - 1];
+      const textResponses = [
+        "You found Scarecrow!",
+        "You found Jack!",
+        "You found TikTok!",
+      ];
+      document.getElementById("text").innerText =
+        textResponses[correctClicked - 1];
+      document.getElementById("text").style.color = "rgb(170, 255, 0)";
       if (correctClicked === 3) {
         setInterval(function () {
           displayResult();
@@ -46,8 +59,17 @@ incorrectSelections.forEach(function (orn) {
   orn.addEventListener("click", function () {
     incorrectClicked += 1;
     orn.style.display = "none";
-    audio.play();
-    if (incorrectClicked === 3) {
+    audio2.play();
+    const textResponses = [
+      "That was not one of your friends!",
+      "You're running out of chances!",
+      "Now you're down to your last chance!",
+      "",
+    ];
+    document.getElementById("text").innerText =
+      textResponses[incorrectClicked - 1];
+    document.getElementById("text").style.color = "rgb(240, 225, 60)";
+    if (incorrectClicked === 4) {
       displayResult();
     }
   });
@@ -74,18 +96,18 @@ function displayResult() {
   if (correctClicked === 1) {
     document.querySelector("#result").innerText =
       "Dorothy managed to save Scarecrow, but Jack, Tik-Tok and the rest of Oz still belong to the Gnome King.";
-    document.querySelector("body").style.backgroundImage = "url(GK.png)";
+    document.querySelector("body").style.backgroundImage = "url(images/GK.png)";
     document.querySelector("#play-again").innerText = "Play again";
   } else if (correctClicked === 2) {
     document.querySelector("#result").innerText =
       "Dorothy managed to save Scarecrow and Jack, but Tik-Tok and the rest of Oz still belong to the Gnome King.";
-    document.querySelector("body").style.backgroundImage = "url(GK.png)";
+    document.querySelector("body").style.backgroundImage = "url(images/GK.png)";
     document.querySelector("#play-again").innerText = "Play again";
     ("href=beware.png display-text");
   } else if (incorrectClicked === 3) {
     document.querySelector("#result").innerText =
       "Dorothy has failed to save her friends. They and the rest of Oz still belong to the Gnome King.";
-    document.querySelector("body").style.backgroundImage = "url(GK.png)";
+    document.querySelector("body").style.backgroundImage = "url(images/GK.png)";
     document.querySelector("#play-again").innerText = "Play again";
   } else {
     window.location.href = "index4.html";

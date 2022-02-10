@@ -6,10 +6,10 @@ body {
 }
 
 .main {
-  background-image: url("beware.png");
+  background-image: url("../images/beware.png");
   background-repeat: no-repeat;
   position: absolute;
-  /* object-fit: cover; */
+  object-fit: cover;
   width: 1400px;
   height: 755px;
 }
