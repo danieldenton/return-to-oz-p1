@@ -12,9 +12,6 @@ const ornanments = [
 
 //variables for winning and incorrectselctions that change everytime the game is played
 const [winningSelections, incorrectSelections] = randomSplit(ornanments, 3);
-// const playerWinSel = [];
-// const playerInc = [];
-
 // function to shuffle the array of ornaments
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
