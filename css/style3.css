@@ -35,6 +35,10 @@ body {
   border: 2px solid rgb(170, 255, 0);
 }
 
+.object:hover {
+  border: 2px solid rgb(168, 5, 243);
+}
+
 #result {
   position: fixed;
   color: rgb(240, 225, 60);
