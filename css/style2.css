@@ -9,6 +9,7 @@ body {
 .main2 {
   background-image: url("../images/GK&D.png");
   background-repeat: no-repeat;
+  background-size: 100%;
   position: absolute;
   /* object-fit: cover; */
   width: 1400px;

@@ -3,12 +3,12 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-repeat: no-repeat;
 }
 
 .main {
   background-image: url("../images/beware.png");
   background-repeat: no-repeat;
+  background-size: 100%;
   position: absolute;
   object-fit: cover;
   width: 1400px;

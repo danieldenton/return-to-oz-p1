@@ -1,6 +1,7 @@
 body {
   background-image: url("../images/OBJ2.png");
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #background-text {
