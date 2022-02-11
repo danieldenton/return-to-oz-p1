@@ -1,5 +1,6 @@
 body {
   background-image: url("../images/Ending.png");
+  background-repeat: no-repeat;
 }
 
 #result2 {
