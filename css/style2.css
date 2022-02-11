@@ -18,7 +18,7 @@ body {
   color: rgb(240, 225, 60);
   font-size: 24px;
   width: 600px;
-  position: relative;
+  position: fixed;
   left: 25px;
 }
 
@@ -26,21 +26,21 @@ body {
   color: rgb(240, 225, 60);
   font-size: 26px;
   width: 600px;
-  position: relative;
-  left: 700px;
-  top: 200px;
+  position: fixed;
+  left: 500px;
+  top: 400px;
 }
 
 #continue {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   width: 240px;
   height: 70px;
-  left: 1000px;
-  top: 180px;
+  left: 800px;
+  bottom: 50px;
 }
 
 a {
